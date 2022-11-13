@@ -2,6 +2,8 @@
 import '../aoc2017.dart';
 
 class Day04 extends Day {
+  @override
+  bool get completed => true;
 
   @override
   part1() {
