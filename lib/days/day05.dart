@@ -2,7 +2,7 @@ import 'package:aoc2017/extensions/extensions.dart';
 
 import '../aoc2017.dart';
 
-class Day04 extends Day {
+class Day05 extends Day {
 
   @override
   part1() {

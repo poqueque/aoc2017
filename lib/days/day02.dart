@@ -5,12 +5,15 @@ import 'package:aoc2017/extensions/extensions.dart';
 import '../aoc2017.dart';
 
 class Day02 extends Day {
+  @override
+  bool get completed => true;
 
   @override
   part1() {
     int sum = 0;
-    for (var line in inputArray){
-      sum += line.map((e) => int.parse(e)).reduce(max) - line.map((e) => int.parse(e)).reduce(min);
+    for (var line in inputArray) {
+      sum += line.map((e) => int.parse(e)).reduce(max) -
+          line.map((e) => int.parse(e)).reduce(min);
     }
     return sum;
   }
@@ -18,7 +21,7 @@ class Day02 extends Day {
   @override
   part2() {
     int sum = 0;
-    for (var line in inputArray){
+    for (var line in inputArray) {
       var numberLine = line.map((e) => int.parse(e));
       var exactDiv = getExactDivision(numberLine);
       sum += exactDiv;
@@ -32,7 +35,7 @@ class Day02 extends Day {
         var big = (number > otherNumber) ? number : otherNumber;
         var small = (number < otherNumber) ? number : otherNumber;
         if (big != small && big % small == 0) {
-          return big~/small;
+          return big ~/ small;
         }
       }
     }
