@@ -1,4 +1,3 @@
-import 'package:aoc2017/extensions/extensions.dart';
 
 import '../aoc2017.dart';
 

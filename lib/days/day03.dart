@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:aoc2017/extensions/extensions.dart';
-
 import '../aoc2017.dart';
 import '../utils/coor.dart';
 
 class Day03 extends Day {
+  @override
+  bool get completed => true;
 
   part1b() {
     var input = int.parse(inputString);

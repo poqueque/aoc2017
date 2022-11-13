@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:aoc2017/extensions/extensions.dart';
-
 import '../aoc2017.dart';
 
 class Day02 extends Day {
