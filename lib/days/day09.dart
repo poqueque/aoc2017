@@ -3,6 +3,7 @@ import '../aoc2017.dart';
 
 class Day09 extends Day {
 
+
   @override
   part1() {
     return 0;

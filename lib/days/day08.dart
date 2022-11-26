@@ -1,15 +1,22 @@
 
+import 'package:aoc2017/utils/jmp_code.dart';
+
 import '../aoc2017.dart';
 
 class Day08 extends Day {
 
   @override
+  bool get completed => true;
+  
+  @override
   part1() {
-    return 0;
+    var jmpCode = JmpCode(inputList);
+    return jmpCode.run();
   }
 
   @override
   part2() {
-    return "0";
+    var jmpCode = JmpCode(inputList);
+    return jmpCode.runMaxDuringProcess();
   }
 }
