@@ -7,7 +7,7 @@ class Day08 extends Day {
 
   @override
   bool get completed => true;
-  
+
   @override
   part1() {
     var jmpCode = JmpCode(inputList);
