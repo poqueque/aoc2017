@@ -63,17 +63,26 @@ class Coor {
     return (x - c.x).abs() + (y - c.y).abs();
   }
 
-  List<Coor> neighbours() {
-    return [
-      Coor(x - 1, y - 1),
-      Coor(x - 1, y),
-      Coor(x - 1, y + 1),
-      Coor(x, y - 1),
-      Coor(x, y + 1),
-      Coor(x + 1, y - 1),
-      Coor(x + 1, y),
-      Coor(x + 1, y + 1),
-    ];
+  List<Coor> neighbours({bool diagonal = true}) {
+    if (diagonal) {
+      return [
+        Coor(x - 1, y - 1),
+        Coor(x - 1, y),
+        Coor(x - 1, y + 1),
+        Coor(x, y - 1),
+        Coor(x, y + 1),
+        Coor(x + 1, y - 1),
+        Coor(x + 1, y),
+        Coor(x + 1, y + 1),
+      ];
+    } else {
+      return [
+        Coor(x - 1, y),
+        Coor(x, y - 1),
+        Coor(x, y + 1),
+        Coor(x + 1, y),
+      ];
+    }
   }
 }
 
@@ -103,11 +112,12 @@ class CoorMap {
     }
   }
 
-  void printMap() {
+  void printMap({bool spaces = true}) {
     String line = "";
+    String spacer = (spaces ? " " : "");
     for (var y = bounds(Direction.up); y <= bounds(Direction.down); y++) {
       for (var x = bounds(Direction.left); x <= bounds(Direction.right); x++) {
-        line += " ${map[Coor(x, y)] ?? " "} ";
+        line += "$spacer${map[Coor(x, y)] ?? " "}$spacer";
       }
       print(line);
       line = "";

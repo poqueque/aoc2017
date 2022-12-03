@@ -82,4 +82,5 @@ class Day10 extends Day {
 
     return hexHash;
   }
+
 }
