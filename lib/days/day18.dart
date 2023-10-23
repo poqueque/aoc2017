@@ -2,6 +2,9 @@ import '../aoc2017.dart';
 
 class Day18 extends Day {
   @override
+  bool get completed => true;
+
+  @override
   part1() {
     var vals = <String, int>{};
     var lastPlayed = 0;
