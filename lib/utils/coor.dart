@@ -2,6 +2,44 @@ import 'dart:math';
 
 enum Direction { left, right, up, down }
 
+Direction turnRight(Direction d) {
+  switch (d) {
+    case Direction.up:
+      return Direction.right;
+    case Direction.down:
+      return Direction.left;
+    case Direction.left:
+      return Direction.up;
+    case Direction.right:
+      return Direction.down;
+  }
+}
+
+Direction turnLeft(Direction d) {
+  switch (d) {
+    case Direction.up:
+      return Direction.left;
+    case Direction.down:
+      return Direction.right;
+    case Direction.left:
+      return Direction.down;
+    case Direction.right:
+      return Direction.up;
+  }
+}
+Direction reverse(Direction d) {
+  switch (d) {
+    case Direction.up:
+      return Direction.down;
+    case Direction.down:
+      return Direction.up;
+    case Direction.left:
+      return Direction.right;
+    case Direction.right:
+      return Direction.left;
+  }
+}
+
 class Coor {
   final int x;
   final int y;
