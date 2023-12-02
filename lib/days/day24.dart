@@ -2,6 +2,9 @@
 import '../aoc2017.dart';
 
 class Day24 extends Day {
+  @override
+  bool get completed => true;
+
   List<Connector> connectors = [];
 
   init() {
