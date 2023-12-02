@@ -38,24 +38,32 @@ class JmpCode {
   process(Instruction instruction) {
     bool condition = false;
     var leftVal = vars[instruction.conditionVar] ?? 0;
-    if (instruction.comparator == "==" && leftVal == instruction.conditionVal)
+    if (instruction.comparator == "==" && leftVal == instruction.conditionVal) {
       condition = true;
-    if (instruction.comparator == "<" && leftVal < instruction.conditionVal)
+    }
+    if (instruction.comparator == "<" && leftVal < instruction.conditionVal) {
       condition = true;
-    if (instruction.comparator == "<=" && leftVal <= instruction.conditionVal)
+    }
+    if (instruction.comparator == "<=" && leftVal <= instruction.conditionVal) {
       condition = true;
-    if (instruction.comparator == ">" && leftVal > instruction.conditionVal)
+    }
+    if (instruction.comparator == ">" && leftVal > instruction.conditionVal) {
       condition = true;
-    if (instruction.comparator == ">=" && leftVal >= instruction.conditionVal)
+    }
+    if (instruction.comparator == ">=" && leftVal >= instruction.conditionVal) {
       condition = true;
-    if (instruction.comparator == "!=" && leftVal != instruction.conditionVal)
+    }
+    if (instruction.comparator == "!=" && leftVal != instruction.conditionVal) {
       condition = true;
+    }
 
     if (condition) {
-      if (instruction.action == "inc")
+      if (instruction.action == "inc") {
         inc(instruction.variable, instruction.value);
-      if (instruction.action == "dec")
+      }
+      if (instruction.action == "dec") {
         dec(instruction.variable, instruction.value);
+      }
     }
   }
 }

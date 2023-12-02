@@ -46,6 +46,7 @@ class Day19 extends Day {
   part2() {
     var pointer = readMap();
     direction = Direction.down;
+    // ignore: unused_local_variable
     var letters = "";
     var steps = 0;
     while (true) {

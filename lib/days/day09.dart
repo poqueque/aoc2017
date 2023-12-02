@@ -34,6 +34,7 @@ class Day09 extends Day {
   @override
   part2() {
     var level = 0;
+    // ignore: unused_local_variable
     var score = 0;
     var garbageChars = 0;
     bool isGarbage = false;

@@ -2,6 +2,9 @@ import '../aoc2017.dart';
 
 class Day23 extends Day {
   @override
+  bool get completed => true;
+
+  @override
   part1() {
     Coprocessor c = Coprocessor(inputList, true);
     return c.run();
@@ -9,27 +12,15 @@ class Day23 extends Day {
 
   @override
   part2() {
+    // ignore: unused_local_variable
     var (a, b, c, d, e, f, g, h) = (1, 0, 0, 0, 0, 0, 0, 0);
-    var it =0;
     b = 79;
     b = b * 100 + 100000;
     c = b + 17000;
     do {
-      it++;
       f = 1;
       d = 2;
       e = 2;
-      // while (g != 0) {
-      //   g = d;
-      //   while (g != 0) {
-      //     g = g * e - b;
-      //     if (g == 0) f = 0;
-      //     e++;
-      //     g = e - b;
-      //   }
-      //   d++;
-      //   g = d - b;
-      // }
       for (d=2; d*d<=b; d++){
         if (b%d ==0) {
           f=0;

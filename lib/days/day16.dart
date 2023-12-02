@@ -21,6 +21,7 @@ class Day16 extends Day {
     var steps = inputString.split(",");
     d.add(p);
 
+    // ignore: unused_local_variable
     bool printed = false;
     var loop = 1000000000;
     for (int i = 0; i < loop; i++) {

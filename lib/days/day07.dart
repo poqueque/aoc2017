@@ -46,7 +46,7 @@ class Day07 extends Day {
             }
           }
         }
-        var dif = programMap[t]!.unbalancedNode();
+        programMap[t]!.unbalancedNode();
 
       }
     }
