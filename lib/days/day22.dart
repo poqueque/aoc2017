@@ -4,6 +4,9 @@ import '../utils/coor.dart';
 
 class Day22 extends Day {
 
+  @override
+  bool get completed => true;
+
   Map<Coor,String> map = {};
   Coor cursor = Coor(0,0);
   Direction direction = Direction.up;
